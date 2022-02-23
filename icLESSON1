@@ -1,0 +1,21 @@
+sh -ci "$(curl -fsSL https://smartcontracts.org/install.sh)" //下载sdk
+
+export PATH=/usr/local/bin/dfx //设置环境
+
+dfx new mysite //创建新项目
+
+cd mysite //进入项目目录
+
+echo '<html><body><h1>Hello World!</h1></body></html>' > src/mysite_assets/assets/index.html //创建网页
+
+cat src/mysite_assets/assets/index.html //查看网页内容
+
+dfx start //前台运行DFX
+
+
+
+cd mysite //进入项目目录
+
+dfx deploy//部署
+
+
